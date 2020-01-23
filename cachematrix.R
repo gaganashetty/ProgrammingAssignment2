@@ -1,7 +1,11 @@
 
 
 ## Write a short comment describing this function
-##This function creates a special matrix object that can cache its inverse
+
+#Create a matrix
+#Get and display the user-defined matrix
+#Calculate the inverse of the user-defined matrix
+#Get and display the calculated inverse matrix
 makeCacheMatrix <- function(x = matrix()) {
 j <- NULL #j is assigned as null
 set <- function(y){
@@ -18,7 +22,10 @@ getInverse = getInverse)
 
 ## Write a short comment describing this function
 
-#cacheSolve function computes the inverse of the special matrix returned by makeCacheMatric above.
+#Once we have set our matrix using the set.matrix function from above,we can either use the set.inverse function from above, or use the function below
+# to calculate the inverse matrix.
+# This function also caches the inverse such that if we run it again, it won't recalculate the mean,
+# rather it will pull it out of the cache of the envrionment of the MakeCacheMatrix function.
 cacheSolve <- function(x, ...) {
 ## Return a matrix that is the inverse of 'x'
 j <- x$getInverse()#Here we are assigning j with the inverse of x
